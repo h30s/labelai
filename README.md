@@ -1,3 +1,62 @@
+# Label AI
+
+A fast, front-end-only AI-powered web application that analyzes food labels and provides health insights.
+
+## Features
+
+- 📸 Upload or capture a photo of a food label
+- 🔍 Extract text using OCR (Tesseract.js)
+- 🧠 AI-powered analysis of ingredients
+- 📊 Health score and eatability meter
+- 🚨 Ingredient breakdown and risk analysis
+- 🥜 Allergen detection mode
+- 🍬 Diabetes-safe scanner mode
+
+## Setup
+
+1. Clone the repository
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Create a `.env.local` file in the root directory and add your Gemini API key:
+   ```
+   REACT_APP_GEMINI_API_KEY=your_gemini_api_key_here
+   ```
+   
+   > **Note:** If you don't have an API key, the app will fall back to using mock data.
+   > You can get a Gemini API key from [Google AI Studio](https://makersuite.google.com/app/apikey).
+
+4. Start the development server:
+   ```
+   npm start
+   ```
+
+## How It Works
+
+1. **Image Upload/Capture**: Users can upload an image file or use their device camera to capture a food label
+2. **OCR Processing**: Tesseract.js extracts text from the image
+3. **Text Editing**: Users can review and edit the extracted text if needed
+4. **AI Analysis**: The text is sent to Google's Gemini API for analysis (or mock data is used if no API key is provided)
+5. **Results Display**: The app shows health scores, ingredient breakdowns, and risk analysis
+
+## Analysis Modes
+
+- **General**: Standard food safety analysis
+- **Allergen Detective**: Detects common allergens and cross-contamination risks
+- **Diabetes-Safe Scanner**: Analyzes sugar content and glycemic impact
+
+## Technologies Used
+
+- ReactJS with Hooks
+- TailwindCSS for styling
+- Tesseract.js for OCR
+- Google Gemini API for ingredient analysis
+
+## License
+
+MIT
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
